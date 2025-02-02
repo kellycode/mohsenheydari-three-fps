@@ -1,3 +1,10 @@
+KellyCode Feb 2, 2025  
+
+Simplified and removed all precompilers, so no webpack and no node_modules  
+Runs without all the build hoopla and makes it easier to work with.  
+
+---
+
 # Three FPS Demo
 
 Three.js FPS game using ammo.js and three-pathfinding with ES6 and Webpack.
