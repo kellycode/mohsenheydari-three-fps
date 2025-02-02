@@ -1,7 +1,7 @@
 import * as THREE from 'three'
-import Component from '../../Component.js'
-import Input from '../../Input.js'
-import {AmmoHelper, CollisionFilterGroups} from '../../AmmoLib.js'
+import Component from '../../core/Component.js'
+import Input from '../../core/Input.js'
+import {AmmoHelper, CollisionFilterGroups} from '../../core/AmmoLib.js'
 import WeaponFSM from './WeaponFSM.js';
 
 

@@ -1,8 +1,8 @@
 import * as THREE from 'three'
-import Component from '../../Component.js'
-import Input from '../../Input.js'
+import Component from '../../core/Component.js'
+import Input from '../../core/Input.js'
 
-import DebugShapes from '../../DebugShapes.js'
+import DebugShapes from '../../core/DebugShapes.js'
 
 
 export default class PlayerControls extends Component{

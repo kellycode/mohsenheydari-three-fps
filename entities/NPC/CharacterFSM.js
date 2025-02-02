@@ -1,4 +1,4 @@
-import {FiniteStateMachine, State} from '../../FiniteStateMachine.js'
+import {FiniteStateMachine, State} from '../../core/FiniteStateMachine.js'
 import * as THREE from 'three'
 
 export default class CharacterFSM extends FiniteStateMachine{

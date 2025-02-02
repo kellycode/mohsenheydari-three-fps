@@ -85,40 +85,21 @@
       }
     </style>
 
-    <script>
-      // var loc_import = function (path) {
-      //   fetch(path)
-      //     .then((response) => {
-      //       if (!response.ok) {
-      //         throw new Error(`HTTP error! status: ${response.status}`);
-      //       }
-      //       return response.blob();
-      //     })
-      //     .then((blob) => {
-      //       console.log(blob)
-      //     })
-      //     .catch((error) => console.error("Error loading image:", error));
-      // };
-    </script>
-
     <script src="./libs/ammo/ammo.js"></script>
 
     <script type="importmap">
       {
         "imports": {
           "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
-          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/",
+          "three-pathfinding": "https://cdn.jsdelivr.net/npm/three-pathfinding@1.3.0/+esm"
         }
       }
     </script>
 
-    <script type="module">
-      import threePathfinding from "https://cdn.jsdelivr.net/npm/three-pathfinding@1.3.0/+esm";
-      //import { FPSGameApp } from "./entry.js";
-      //console.log(FPSGameApp);
-    </script>
-
+    <!-- auto instantiates -->
     <script type="module" src="./entry.js"></script>
+
   </head>
 
   <body>

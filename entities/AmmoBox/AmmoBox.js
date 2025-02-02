@@ -1,5 +1,5 @@
-import Component from '../../Component.js'
-import {AmmoHelper, CollisionFilterGroups} from '../../AmmoLib.js'
+import Component from '../../core/Component.js'
+import {AmmoHelper, CollisionFilterGroups} from '../../core/AmmoLib.js'
 
 
 export default class AmmoBox extends Component{

@@ -13,10 +13,10 @@ import * as THREE from "three";
 import {
   AmmoHelper,
   createConvexHullShape,
-} from "./AmmoLib.js";
+} from "./core/AmmoLib.js";
 
-import EntityManager from "./EntityManager.js";
-import Entity from "./Entity.js";
+import EntityManager from "./core/EntityManager.js";
+import Entity from "./core/Entity.js";
 import Sky from "./entities/Sky/Sky2.js";
 import LevelSetup from "./entities/Level/LevelSetup.js";
 import PlayerControls from "./entities/Player/PlayerControls.js";
@@ -27,7 +27,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import * as SkeletonUtils from "three/addons/utils/SkeletonUtils.js";
 import NpcCharacterController from "./entities/NPC/CharacterController.js";
-import Input from "./Input.js";
+import Input from "./core/Input.js";
 
 let level = "./assets/level.glb";
 let navmesh = "./assets/navmesh.obj";
@@ -56,7 +56,7 @@ let decalAlpha = "./assets/decals/decal_a.jpg";
 //Sky
 let skyTex = "./assets/sky.jpg";
 
-//import DebugDrawer from "./DebugDrawer.js";
+//import DebugDrawer from "./core/DebugDrawer.js";
 import Navmesh from "./entities/Level/Navmesh.js";
 import AttackTrigger from "./entities/NPC/AttackTrigger.js";
 import DirectionDebug from "./entities/NPC/DirectionDebug.js";
