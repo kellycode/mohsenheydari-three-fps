@@ -1,7 +1,6 @@
 import * as THREE from 'three'
-import { Ammo } from "../../AmmoLib";
-import Component from "../../Component";
-import {  DecalGeometry  } from 'three/examples/jsm/geometries/DecalGeometry'
+import Component from "../../Component.js";
+import {  DecalGeometry  } from 'three/addons/geometries/DecalGeometry.js'
 
 
 export default class LevelBulletDecals extends Component{

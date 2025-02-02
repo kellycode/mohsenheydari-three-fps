@@ -1,4 +1,4 @@
-import Component from "../../Component";
+import Component from "../../Component.js";
 
 export default class PlayerHealth extends Component{
     constructor(){

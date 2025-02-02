@@ -1,6 +1,6 @@
 import * as THREE from 'three'
-import Component from '../../Component'
-import {Ammo, AmmoHelper} from '../../AmmoLib'
+import Component from '../../Component.js'
+import {AmmoHelper, CollisionFilterGroups} from '../../AmmoLib.js'
 
 export default class CharacterCollision extends Component{
     constructor(physicsWorld){

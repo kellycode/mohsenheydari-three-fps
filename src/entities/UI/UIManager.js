@@ -1,4 +1,4 @@
-import Component from '../../Component'
+import Component from '../../Component.js'
 
 export default class UIManager extends Component{
     constructor(){

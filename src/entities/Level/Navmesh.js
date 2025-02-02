@@ -1,7 +1,7 @@
 import * as THREE from 'three';
-import Component from '../../Component'
+import Component from '../../Component.js'
 
-import {Pathfinding} from 'three-pathfinding'
+import {Pathfinding} from 'https://cdn.jsdelivr.net/npm/three-pathfinding@1.3.0/+esm'
 
 
 export default class Navmesh extends Component{

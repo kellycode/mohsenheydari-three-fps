@@ -1,8 +1,6 @@
-import * as _Ammo from "ammo.js"
 import * as THREE from 'three'
-import {ConvexHull} from '../node_modules/three/examples/jsm/math/ConvexHull'
+import {ConvexHull} from 'three/addons/math/ConvexHull.js'
 
-let Ammo = null;
 let rayOrigin = null;
 let rayDest = null;
 let closestRayResultCallback = null;
@@ -59,10 +57,16 @@ function createConvexGeom (object) {
 class AmmoHelper{
 
   static Init(callback = ()=>{}){
-    _Ammo().then((ammo)=>{
-        Ammo = ammo;
-        callback();
-    });
+    Ammo().then(function(AmmoLib) {
+      Ammo = AmmoLib;
+  
+      // Now you can use Ammo.btVector3
+      var vector = new Ammo.btVector3(0, 0, 0);
+  
+      // Your initialization code
+      callback();
+  });
+  
   }
 
   static CreateTrigger(shape, position, rotation){
@@ -136,4 +140,4 @@ class AmmoHelper{
 
 }
 
-export {AmmoHelper, Ammo, createConvexHullShape, CollisionFlags, CollisionFilterGroups}
+export {AmmoHelper, createConvexHullShape, CollisionFlags, CollisionFilterGroups}

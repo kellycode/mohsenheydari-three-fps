@@ -1,5 +1,4 @@
-import Component from '../../Component'
-import {Ammo} from '../../AmmoLib'
+import Component from '../../Component.js'
 
 //Bullet enums
 const CF_KINEMATIC_OBJECT = 2;

@@ -1,5 +1,5 @@
-import Component from '../../Component'
-import {Ammo, AmmoHelper, CollisionFilterGroups} from '../../AmmoLib'
+import Component from '../../Component.js'
+import {AmmoHelper, CollisionFilterGroups} from '../../AmmoLib.js'
 
 export default class AttackTrigger extends Component{
     constructor(physicsWorld){

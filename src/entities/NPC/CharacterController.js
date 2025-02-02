@@ -1,9 +1,8 @@
 import * as THREE from 'three'
-import Component from '../../Component'
-import {Ammo, AmmoHelper, CollisionFilterGroups} from '../../AmmoLib'
-import CharacterFSM from './CharacterFSM'
-
-import DebugShapes from '../../DebugShapes'
+import Component from '../../Component.js'
+import CharacterFSM from './CharacterFSM.js'
+import {AmmoHelper, CollisionFilterGroups} from '../../AmmoLib.js'
+import DebugShapes from '../../DebugShapes.js'
 
 
 export default class CharacterController extends Component{

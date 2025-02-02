@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      body{
+      body {
         margin: 0;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         color: white;
       }
-      #crosshair{
+      #crosshair {
         position: absolute;
         top: 50%;
         left: 50%;
         width: 2%;
         transform: translate(-50%, -50%);
       }
-      #ammo_container{
+      #ammo_container {
         position: absolute;
         right: 5%;
         bottom: 5%;
         font-size: 3em;
       }
-      #progress{
+      #progress {
         position: absolute;
         bottom: 9%;
         left: 0;
@@ -33,7 +36,7 @@
         height: 2%;
         background-color: white;
       }
-      #health_container{
+      #health_container {
         position: absolute;
         bottom: 8%;
         left: 5%;
@@ -41,16 +44,16 @@
         height: 2%;
         border: 1px solid #ffffff;
       }
-      #health_progress{
+      #health_progress {
         position: absolute;
         background-color: #ffffff;
         width: 100%;
         height: 100%;
       }
-      #game_hud{
+      #game_hud {
         visibility: hidden;
       }
-      #menu{
+      #menu {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -62,12 +65,12 @@
         flex-direction: column;
         visibility: hidden;
       }
-      h1{
-        font-family: 'Libre Barcode 39 Text', cursive;
+      h1 {
+        font-family: "Libre Barcode 39 Text", cursive;
         font-size: 4em;
       }
-      button{
-        background-color: rgba(0,0,0,0);
+      button {
+        background-color: rgba(0, 0, 0, 0);
         color: rgb(221, 221, 221);
         font-size: 1.5em;
         border: none;
@@ -75,12 +78,47 @@
         margin-top: 10%;
         font-weight: 700;
       }
-      #debug{
+      #debug {
         position: absolute;
         right: 5%;
         top: 5%;
       }
     </style>
+
+    <script>
+      // var loc_import = function (path) {
+      //   fetch(path)
+      //     .then((response) => {
+      //       if (!response.ok) {
+      //         throw new Error(`HTTP error! status: ${response.status}`);
+      //       }
+      //       return response.blob();
+      //     })
+      //     .then((blob) => {
+      //       console.log(blob)
+      //     })
+      //     .catch((error) => console.error("Error loading image:", error));
+      // };
+    </script>
+
+    <script src="./libs/ammo/ammo.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import threePathfinding from "https://cdn.jsdelivr.net/npm/three-pathfinding@1.3.0/+esm";
+      //import { FPSGameApp } from "./entry.js";
+      //console.log(FPSGameApp);
+    </script>
+
+    <script type="module" src="./entry.js"></script>
   </head>
 
   <body>
@@ -90,7 +128,7 @@
       <button id="start_game">NEW GAME</button>
     </div>
     <div id="game_hud">
-      <img id="crosshair" src="<%=require('./ui/crosshair.png')%>" />
+      <img id="crosshair" src="./ui/crosshair.png" />
       <div id="ammo_container">
         <span id="current_ammo">0</span>
         <span>|</span>

@@ -1,6 +1,6 @@
-import Component from '../../Component'
+import Component from '../../Component.js'
 import * as THREE from 'three'
-import {Ammo, createConvexHullShape} from '../../AmmoLib'
+import { createConvexHullShape } from '../../AmmoLib.js'
 
 export default class LevelSetup extends Component{
     constructor(mesh, scene, physicsWorld){
