@@ -363,6 +363,7 @@ class FPSGameApp {
   }
 
   StartGame = () => {
+    document.getElementById("loading_spinner").style.display = 'none';
     window.cancelAnimationFrame(this.animFrameId);
     Input.ClearEventListners();
 
